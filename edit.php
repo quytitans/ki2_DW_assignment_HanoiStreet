@@ -33,7 +33,7 @@ $r = $result->fetch_assoc();
 <div class="bg bg3"></div>
 <div class="content">
     <h1>Edit Information</h1>
-    <form class="mainForm" name="mainForm" id="mainForm">
+    <form class="mainForm" name="mainForm1" id="mainForm1">
         <div class="form-group">
             <!-- Full Name -->
             <label for="name" class="control-label">Street's Name</label>
@@ -96,7 +96,7 @@ $r = $result->fetch_assoc();
         </div>
         <div class="form-group">
             <!-- Submit Button -->
-            <button type="button" class="btn btn-success">Update</button>
+            <button type="submit" class="btn btn-success">Update</button>
             <a href="/Ki2_DW_Assignment_DistrictName/list.php">
                 <button type="button" class="btn btn-primary">Cancel</button>
             </a>
@@ -110,7 +110,39 @@ $r = $result->fetch_assoc();
 <script src="./js/form.js"></script>
 <script>
     window.addEventListener('DOMContentLoaded', function () {
+        const name = $('input[name=name]');
+        const desciption = $('input[name=desciption]');
+        const usingDate = $('input[name=usingDate]');
+        const district = $('select[name=district]');
+        const status = $('select[name=status]');
+        $("#mainForm1").submit(function(e) {
+            e.preventDefault();
+            let data = {
+                id:'<?php echo $r["id"] ?>',
+                name: name.val(),
+                desciption: desciption.val(),
+                usingDate: usingDate.val(),
+                district: district.val(),
+                status: status.val()
+            }
+            if (name.val() != '' && desciption.val() != '' && usingDate.val() != '' && district.val() != '' && status.val() != '') {
+                $.ajax({
+                    url: '/Ki2_DW_Assignment_DistrictName/API_php/update.php',
+                    method: 'POST',
+                    data: JSON.stringify(data),
 
+                    success: function() {
+                        alert("update successs !!!");
+                        window.location.href = '/Ki2_DW_Assignment_DistrictName/list.php';
+                    },
+                    error: function() {
+                        alert("save fail !!!");
+                    }
+                })
+                console.log(data);
+            }
+
+        })
     })
 </script>
 </body>
