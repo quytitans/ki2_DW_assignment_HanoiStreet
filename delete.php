@@ -42,6 +42,7 @@
             <div class="form-group">
                 <!-- Submit Button -->
                 <a href="/Ki2_DW_Assignment_DistrictName/list.php"><button type="button" class="btn btn-danger " id="btnComfirm">Confirm Delete</button></a>
+                <a href="/Ki2_DW_Assignment_DistrictName/list.php"><button type="button" class="btn btn-primary " id="">Cancel</button></a>
             </div>
         </form>
     </div>
