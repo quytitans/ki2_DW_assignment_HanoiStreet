@@ -33,6 +33,9 @@
                 <a href="/Ki2_DW_Assignment_DistrictName/form.php">
                     <button type="button" name="btnSubmit" class="btn btn-default mb-2 ml-2">Add new street</button>
                 </a>
+                <a href="/Ki2_DW_Assignment_DistrictName/index.php">
+                    <button type="button" name="btnSubmit" class="btn btn-default mb-2 ml-2">Home Page</button>
+                </a>
             </form>
             <table class="table table-striped table-dark">
             </table>

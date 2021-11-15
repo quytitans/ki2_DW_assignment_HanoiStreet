@@ -49,7 +49,7 @@
             <div class="form-group">
                 <!-- Submit Button -->
                 <button type="submit" class="btn btn-success">Save</button>
-                <a href="/Ki2_DW_Assignment_DistrictName/list.php"><button type="button" class="btn btn-default">Home</button></a>
+                <a href="/Ki2_DW_Assignment_DistrictName/index.php"><button type="button" class="btn btn-default">Home</button></a>
                 <a href="/Ki2_DW_Assignment_DistrictName/list.php"><button type="button" class="btn btn-default">View All Streets</button></a>
             </div>
         </form>
