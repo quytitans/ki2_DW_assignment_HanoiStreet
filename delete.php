@@ -13,7 +13,7 @@
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
     <div class="content">
-        <h1>Confirm to delete</h1>
+        <h1 class="text-danger font-weight-bold">Are you sure you want to delete?</h1>
         <form class="mainForm" name="mainForm" id="mainForm">
             <div class="form-group">
                 <!-- Full Name -->
